@@ -1,0 +1,4 @@
+insert into public.admins (user_id, email)
+select id, email from auth.users where email = 'asdemmad2019@gmail.com'
+on conflict (user_id) do nothing;
+select * from public.admins where email = 'asdemmad2019@gmail.com';
