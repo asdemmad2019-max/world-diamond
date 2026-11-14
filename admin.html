@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WORLD DIAMOND - لوحة الأدمن</title>
+<style>
+*{box-sizing:border-box} body{margin:0;background:#000;color:#fff;font-family:system-ui;padding:16px}
+.card{max-width:480px;margin:0 auto;background:#0a0a0a;border:1px solid rgba(212,175,55,.4);border-radius:24px;padding:22px}
+h1{color:#FFD700;text-align:center;font-size:22px} p{color:rgba(212,175,55,.7);text-align:center;font-size:12px}
+input,textarea{width:100%;background:#111;border:1px solid rgba(212,175,55,.3);border-radius:12px;padding:12px;color:#fff;margin-bottom:10px}
+button{width:100%;background:linear-gradient(135deg,#D4AF37,#FFD700);color:#000;border:none;border-radius:12px;padding:13px;font-weight:900;cursor:pointer;margin-bottom:8px}
+.ghost{background:#111;color:#D4AF37;border:1px solid rgba(212,175,55,.3)}
+.item{background:#111;border:1px solid rgba(212,175,55,.15);border-radius:12px;padding:10px;margin-top:8px;display:flex;justify-content:space-between;gap:8px;align-items:center}
+.item b{font-size:13px} .del{background:rgba(239,68,68,.15);color:#ef4444;border:1px solid rgba(239,68,68,.4);border-radius:999px;padding:6px 12px;cursor:pointer;width:auto}
+label{font-size:11px;letter-spacing:1px;color:#D4AF37;font-weight:900}
+</style>
+</head>
+<body>
+<div class="card" id="app"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+const SUPABASE_URL="https://cwwvuwqmiaoyctfhjxez.supabase.co";
+const SUPABASE_ANON_KEY="sb_publishable_JmbeY1li_JTtZ8P7fvik8Q_9IzihPCR";
+const sb=window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+const app=document.getElementById('app');
+function showLogin(){
+  app.innerHTML=`<div style="text-align:center;font-size:30px">💎</div><h1>ادخل الخزنة</h1><p>WORLD DIAMOND • ADMIN ONLY</p>
+  <input id="em" type="email" placeholder="الإيميل - GOLD ID">
+  <input id="pw" type="password" placeholder="كلمة السر - VAULT KEY">
+  <button onclick="login()">UNLOCK • افتح</button>
+  <button class="ghost" onclick="signup()">إنشاء حساب أدمن أول مرة</button>
+  <p>أول مرة: اضغط إنشاء حساب، وبعدها نفذ في SQL Editor:<br>insert into public.admins (user_id,email) select id,email from auth.users where email='ايميلك';</p>`;
+}
+async function signup(){
+  const email=document.getElementById('em').value.trim(), password=document.getElementById('pw').value.trim();
+  if(!email||!password) return alert('املأ الحقلين');
+  const {error}=await sb.auth.signUp({email,password});
+  if(error) return alert(error.message);
+  alert('تم إنشاء الحساب ✅ - هسه نفذ سطر الـ admins في SQL Editor وبعدها ادخل');
+}
+async function login(){
+  const email=document.getElementById('em').value.trim(), password=document.getElementById('pw').value.trim();
+  const {data,error}=await sb.auth.signInWithPassword({email,password});
+  if(error) return alert(error.message);
+  showPanel();
+}
+async function showPanel(){
+  const {data:{user}}=await sb.auth.getUser();
+  if(!user) return showLogin();
+  app.innerHTML=`<h1>👑 لوحة الأدمن</h1><p>${user.email} • أنت المتحكم بكل شي</p>
+  <label>إضافة فيديو جديد</label>
+  <input id="t" placeholder="عنوان الفيديو">
+  <input id="u" placeholder="رابط الفيديو">
+  <input id="img" placeholder="صورة الغلاف (اختياري)">
+  <button onclick="addVideo()">+ إضافة فيديو</button>
+  <label>الفيديوهات</label><div id="list">جاري التحميل...</div>
+  <button class="ghost" onclick="logout()">تسجيل خروج</button>`;
+  loadList();
+}
+async function loadList(){
+  const {data,error}=await sb.from('videos').select('*').order('created_at',{ascending:false});
+  const el=document.getElementById('list');
+  if(error){ el.innerHTML=error.message; return; }
+  if(!data.length){ el.innerHTML='<p>لا يوجد فيديوهات بعد</p>'; return; }
+  el.innerHTML=data.map(v=>`<div class="item"><div><b>${v.title}</b><br><small style="color:#D4AF37">${v.video_url}</small></div><button class="del" onclick="delVideo(${v.id})">حذف</button></div>`).join('');
+}
+async function addVideo(){
+  const title=document.getElementById('t').value.trim(), video_url=document.getElementById('u').value.trim(), image_url=document.getElementById('img').value.trim();
+  if(!title||!video_url) return alert('حط العنوان والرابط');
+  const {error}=await sb.from('videos').insert([{title,video_url,image_url}]);
+  if(error) return alert('خطأ: '+error.message+' - تأكد أنك أضفت نفسك في جدول admins');
+  alert('تمت الإضافة ✅'); loadList();
+}
+async function delVideo(id){
+  if(!confirm('تحذف هذا الفيديو؟')) return;
+  const {error}=await sb.from('videos').delete().eq('id',id);
+  if(error) return alert(error.message); loadList();
+}
+async function logout(){ await sb.auth.signOut(); showLogin(); }
+sb.auth.getSession().then(({data})=>{ if(data.session) showPanel(); else showLogin(); });
+</script>
+</body>
+</html>
