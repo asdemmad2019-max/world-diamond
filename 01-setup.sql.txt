@@ -1,0 +1,26 @@
+create table if not exists public.admins (user_id uuid primary key, email text);
+alter table public.admins enable row level security;
+create policy if not exists "admins_read" on public.admins for select using (true);
+create policy if not exists "admins_insert" on public.admins for insert with check (true);
+
+create table if not exists public.videos (id bigint generated always as identity primary key, title text, description text, video_url text, image_url text, owner_id uuid, owner_email text, is_published boolean default false, created_at timestamptz default now());
+alter table public.videos enable row level security;
+create policy if not exists "videos_read" on public.videos for select using (true);
+create policy if not exists "videos_insert" on public.videos for insert with check (true);
+create policy if not exists "videos_update" on public.videos for update using (true);
+create policy if not exists "videos_delete" on public.videos for delete using (true);
+
+create table if not exists public.likes (id bigint generated always as identity primary key, video_id bigint references public.videos(id) on delete cascade, user_id uuid, created_at timestamptz default now(), unique(video_id,user_id));
+alter table public.likes enable row level security;
+create policy if not exists "likes_read" on public.likes for select using (true);
+create policy if not exists "likes_insert" on public.likes for insert with check (true);
+create policy if not exists "likes_delete" on public.likes for delete using (true);
+
+create table if not exists public.comments (id bigint generated always as identity primary key, video_id bigint references public.videos(id) on delete cascade, user_id uuid, user_email text, text text, created_at timestamptz default now());
+alter table public.comments enable row level security;
+create policy if not exists "comments_read" on public.comments for select using (true);
+create policy if not exists "comments_insert" on public.comments for insert with check (true);
+create policy if not exists "comments_delete" on public.comments for delete using (true);
+
+insert into storage.buckets (id,name,public) values ('videos','videos',true) on conflict (id) do nothing;
+insert into storage.buckets (id,name,public) values ('covers','covers',true) on conflict (id) do nothing;
