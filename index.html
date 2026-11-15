@@ -2,30 +2,28 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>💎</title>
+<title>الجوهرة</title>
 <link rel="manifest" href="manifest.json"><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta name="theme-color" content="#000000">
-<link rel="icon" href="icon-192.png">
+<link rel="icon" href="icon-192.png?v=20"><link rel="apple-touch-icon" href="apple-touch-icon.png?v=20"><link rel="manifest" href="manifest.json?v=20">
 <style>
 *{box-sizing:border-box}body{margin:0;background:#000;color:#fff;font-family:system-ui;padding-bottom:90px}
 .top{position:sticky;top:0;z-index:10;background:#000;text-align:center;padding:14px 10px 4px}
-.diamond-scene{perspective:900px;display:flex;justify-content:center}
-.diamond-3d{width:72px;height:72px;position:relative;transform-style:preserve-3d;animation:dspin 6s ease-in-out infinite,dfloat 3s ease-in-out infinite}
 @keyframes dspin{0%,100%{transform:rotateY(-22deg) rotateX(6deg)}50%{transform:rotateY(22deg) rotateX(-4deg)}}
 @keyframes dfloat{0%,100%{margin-top:0}50%{margin-top:-6px}}
-.diamond-3d .top-facet{position:absolute;inset:0;clip-path:polygon(50% 0,100% 32%,50% 100%,0 32%);background:linear-gradient(135deg,#FFF8DC 0%,#FFD700 28%,#D4AF37 55%,#8B6508 78%,#FFEC8B 100%)}
-.diamond-3d .facet-l{position:absolute;inset:0;clip-path:polygon(0 32%,50% 42%,50% 100%);background:linear-gradient(180deg,#B8860B,#6B4E00)}
-.diamond-3d .facet-r{position:absolute;inset:0;clip-path:polygon(100% 32%,50% 42%,50% 100%);background:linear-gradient(180deg,#FFE55C,#A67C00)}
-.diamond-3d .facet-m{position:absolute;inset:0;clip-path:polygon(50% 0,100% 32%,50% 42%,0 32%);background:linear-gradient(90deg,#FFFACD,#FFD700 40%,#FFF8DC 60%,#D4AF37)}
-.diamond-3d .shine{position:absolute;left:18%;top:8%;width:22%;height:22%;background:radial-gradient(circle,#fff,transparent 70%);border-radius:50%}
-.diamond-mini{width:28px;height:28px;display:inline-block;position:relative;filter:drop-shadow(0 3px 6px rgba(255,215,0,.6))}
-.diamond-mini:before{content:"";position:absolute;inset:0;clip-path:polygon(50% 0,100% 32%,50% 100%,0 32%);background:linear-gradient(135deg,#FFF8DC,#FFD700 40%,#B8860B)}
+.diamond-img{width:96px;height:96px;object-fit:cover;border-radius:22px;display:block;margin:0 auto;animation:dspin 6s ease-in-out infinite,dfloat 3s ease-in-out infinite;box-shadow:0 0 28px rgba(255,215,0,.55)}
+.diamond-mini-img{width:28px;height:28px;object-fit:cover;border-radius:8px;display:inline-block;vertical-align:middle;box-shadow:0 0 10px rgba(255,215,0,.5)}
+.diamond-inline{width:18px;height:18px;object-fit:cover;border-radius:5px;vertical-align:middle;display:inline-block}
+.diamond-btn-img{width:20px;height:20px;object-fit:cover;border-radius:6px;vertical-align:middle}
+.diamond-react{width:20px;height:20px;object-fit:cover;border-radius:6px;vertical-align:middle}
+.fall-img{width:28px;height:28px;object-fit:cover;border-radius:8px;position:absolute;top:-30px;animation:fall linear forwards;opacity:.95}
+.big-diamond-img{width:120px;height:120px;object-fit:cover;border-radius:28px;box-shadow:0 0 40px #FFD700}
 .wrap{max-width:520px;margin:0 auto;padding:12px}
 .card{background:linear-gradient(180deg,#131008,#0a0a0a);border:1px solid rgba(212,175,55,.45);border-radius:22px;padding:18px;margin-bottom:12px}
 input,textarea{width:100%;background:#111;border:1px solid rgba(212,175,55,.35);border-radius:14px;padding:14px;color:#fff;margin-bottom:10px;font-size:15px}
 button{width:100%;background:linear-gradient(135deg,#D4AF37,#FFD700);color:#000;border:none;border-radius:14px;padding:14px;font-weight:900;cursor:pointer;margin-bottom:8px;font-size:15px}
 button:disabled{opacity:.5}.ghost{background:#111!important;color:#D4AF37!important;border:1px solid rgba(212,175,55,.35)}
 .small{font-size:12px;color:rgba(212,175,55,.85);text-align:center}.err{color:#ff8080;font-size:13px;text-align:center;min-height:18px}
-.profile{text-align:center}.avatar{width:84px;height:84px;border-radius:50%;background:linear-gradient(135deg,#D4AF37,#FFD700);color:#000;display:flex;align-items:center;justify-content:center;font-size:38px;font-weight:900;margin:0 auto;border:3px solid #FFD700}
+.profile{text-align:center}.avatar{width:84px;height:84px;border-radius:50%;background:linear-gradient(135deg,#D4AF37,#FFD700);color:#000;display:flex;align-items:center;justify-content:center;font-size:38px;font-weight:900;margin:0 auto;border:3px solid #FFD700;overflow:hidden}.avatar img{width:100%;height:100%;object-fit:cover}.avatar-mini{width:34px;height:34px;border-radius:50%;object-fit:cover;border:2px solid #FFD700;vertical-align:middle}.avatar-mini-letter{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#D4AF37,#FFD700);color:#000;display:inline-flex;align-items:center;justify-content:center;font-weight:900;font-size:16px;vertical-align:middle}
 .stats{display:flex;gap:8px;margin-top:14px}.stat{flex:1;background:#111;border:1px solid rgba(212,175,55,.25);border-radius:14px;padding:10px 4px;text-align:center}.stat b{color:#FFD700;font-size:18px;display:block}.stat span{font-size:11px;color:#D4AF37}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.tile{background:#111;border:1px solid rgba(212,175,55,.25);border-radius:16px;overflow:hidden}.tile video{width:100%;aspect-ratio:1/1;object-fit:cover;background:#000;display:block}.tile .p{padding:9px}.tile b{font-size:13px}.tile small{color:#D4AF37;font-size:11px}
 .video{background:#111;border:1px solid rgba(212,175,55,.25);border-radius:18px;overflow:hidden;margin-bottom:14px}.video video{width:100%;display:block;background:#000;max-height:520px}.pad{padding:13px}.pad b{font-size:16px}.pad small{color:#D4AF37}
@@ -40,7 +38,7 @@ button:disabled{opacity:.5}.ghost{background:#111!important;color:#D4AF37!import
 .diamond-btn{transition:.2s}
 .diamond-btn:active{transform:scale(.9)}
 .burst{position:relative}
-.burst::after{content:"💎";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);animation:burst .8s ease forwards;pointer-events:none;font-size:32px}
+.burst::after{content:"";position:absolute;left:50%;top:50%;width:44px;height:44px;background:url('diamond-small.png?v=20') center/cover no-repeat;border-radius:12px;transform:translate(-50%,-50%);animation:burst .8s ease forwards;pointer-events:none;box-shadow:0 0 18px rgba(255,215,0,.8)}
 @keyframes burst{0%{opacity:1;transform:translate(-50%,-50%) scale(.5)}100%{opacity:0;transform:translate(-50%,-50%) scale(1.6)}}
 .comment{animation:fadeIn .3s ease}
 @keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
@@ -66,24 +64,24 @@ button:disabled{opacity:.5}.ghost{background:#111!important;color:#D4AF37!import
 .emoji-row{display:flex;gap:6px;margin-top:6px}
 .emoji-row button{padding:8px!important;font-size:16px;background:#111!important}
 .leader{border:1px solid rgba(255,215,0,.5);background:linear-gradient(180deg,#1a1400,#0a0a0a)}
-.topbar{display:flex;gap:6px;overflow-x:auto;padding:4px 0}
+.topbar{display:flex;gap:6px;overflow-x:auto;padding:4px 0}.reply{margin-right:18px;border-right:2px solid rgba(212,175,55,.5)}.notif-dot{background:#ff3b30;color:#fff;font-size:10px;border-radius:999px;padding:1px 6px;margin-right:4px;display:inline-block}.notif-unread{border-color:#FFD700!important;background:#1a1400!important}.clickable{cursor:pointer}.clickable:hover{color:#FFD700}
 
 </style>
 </head>
 <body>
-<!-- V13 -->
+<!-- V20 -->
 <script>
 (function(){ try{
-  if(localStorage.getItem('wd_ver')==='V13') return;
-  localStorage.setItem('wd_ver','V13');
+  if(localStorage.getItem('wd_ver')==='V20') return;
+  localStorage.setItem('wd_ver','V20');
   if('serviceWorker' in navigator){ navigator.serviceWorker.getRegistrations().then(function(rs){ rs.forEach(function(r){ r.unregister(); }); }); }
   if(window.caches){ caches.keys().then(function(ks){ ks.forEach(function(k){ caches.delete(k); }); }); }
   // reload once with fresh version so new SW takes over
-  setTimeout(function(){ location.replace(location.pathname+'?v=13&fresh='+Date.now()); }, 300);
+  setTimeout(function(){ location.replace(location.pathname+'?v=20&fresh='+Date.now()); }, 300);
 }catch(e){} })();
 </script>
 
-<div class="top" data-version="V13"><div style="font-size:11px;color:#FFD700;letter-spacing:2px">💎</div><div class="diamond-scene"><div class="diamond-3d"><div class="top-facet"></div><div class="facet-l"></div><div class="facet-r"></div><div class="facet-m"></div><div class="shine"></div></div></div></div>
+<div class="top" data-version="V20"><img class="diamond-img" src="diamond.png?v=20" alt=""></div>
 <div class="wrap" id="app">
 <div class="card">
 <input id="em" type="email" placeholder="إيميلك">
@@ -97,10 +95,10 @@ button:disabled{opacity:.5}.ghost{background:#111!important;color:#D4AF37!import
 </div>
 <div id="fx"></div><div id="toast"></div>
 <nav class="nav" id="nav" style="display:none">
-<button id="n-feed" onclick="go('feed')"><span class="diamond-mini"></span></button>
+<button id="n-feed" onclick="go('feed')"><img class="diamond-mini-img" src="diamond-small.png?v=20" alt=""></button>
 <button id="n-upload" onclick="go('upload')">➕<br>ارفع</button>
 <button id="n-you" onclick="go('you')">👤<br>YOU</button>
-<button id="n-admin" onclick="go('admin')" style="display:none">👑<br>الأدمن</button><button id="n-users" onclick="go('users')">🔍<br>بحث يوزر</button><button id="n-settings" onclick="go('settings')">⚙️<br>الأمان</button>
+<button id="n-admin" onclick="go('admin')" style="display:none">👑<br>الأدمن</button><button id="n-users" onclick="go('users')">🔍<br>بحث يوزر</button><button id="n-saved" onclick="go('saved')">🔖<br>محفوظ</button><button id="n-notifs" onclick="go('notifs')">🔔<br>تنبيهات <span id="notifBadge"></span></button><button id="n-settings" onclick="go('settings')">⚙️<br>الأمان</button>
 </nav>
 <script>window.onerror=function(m){var d=document.getElementById('app'); if(d) d.innerHTML='<div class="card"><b>صار خطأ بالتطبيق:</b><br><small>'+m+'</small><br><button onclick="location.reload()">🔄 تحديث</button></div>'};</script><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
@@ -108,13 +106,20 @@ const SUPABASE_URL="https://cwwvuwqmiaoyctfhjxez.supabase.co";
 const SUPABASE_ANON_KEY="sb_publishable_JmbeY1li_JTtZ8P7fvik8Q_9IzihPCR";
 const sb=window.supabase.createClient(SUPABASE_URL,SUPABASE_ANON_KEY);
 const app=document.getElementById('app'), nav=document.getElementById('nav');
-let USER=null, IS_ADMIN=false, TAB='feed', COUNTS={pub:0,mine:0,pend:0}, SEARCH='', LIKES={}, COMMENTS={}, FOLLOWS={}, MY_FOLLOWING=new Set(), USER_SEARCH='', SORT='new', MY_FOLLOWERS=0, PROFILES={}, VIEWS=[], VIEWS_COUNT={}, VIEWS_RANGE='all';
+let USER=null, IS_ADMIN=false, TAB='feed', BLOCKED=new Set(), VIDEO_OWNERS={}, PROFILE_ID=null, REPLY_TO=null, SAVED=new Set(), NOTIF_UNREAD=0, COUNTS={pub:0,mine:0,pend:0}, SEARCH='', LIKES={}, COMMENTS={}, FOLLOWS={}, MY_FOLLOWING=new Set(), USER_SEARCH='', SORT='new', MY_FOLLOWERS=0, PROFILES={}, VIEWS=[], VIEWS_COUNT={}, VIEWS_RANGE='all';
 
 function displayNameOf(uid, email){
   const pr = PROFILES[uid];
   if(pr && (pr.display_name || pr.username)) return pr.display_name || ('@'+pr.username);
   if(uid===USER?.id && localStorage.getItem('wd_name')) return localStorage.getItem('wd_name');
   return (email||'').split('@')[0] || 'مستخدم';
+}
+function avatarOf(uid,size){
+  const pr=PROFILES[uid];
+  if(pr && pr.avatar_url) return '<img class="'+(size==='mini'?'avatar-mini':'avatar')+'" src="'+esc(pr.avatar_url)+'">';
+  const nm=displayNameOf(uid,''); const L=(nm[0]||'D').toUpperCase();
+  if(size==='mini') return '<span class="avatar-mini-letter">'+L+'</span>';
+  return L;
 }
 function usernameOf(uid){
   const pr = PROFILES[uid];
@@ -137,7 +142,6 @@ function viewsInRange(range){
   return VIEWS.filter(r=>{ if(!from) return true; return new Date(r.created_at) >= from; });
 }
 function myViewsInRange(range){
-  // مشاهدات فيديوهاتي فقط - نحتاج قائمة فيديوهاتي
   const mineIds = new Set((MY_VIDEO_IDS||[]));
   return viewsInRange(range).filter(r=>mineIds.has(r.video_id));
 }
@@ -151,105 +155,15 @@ async function trackView(videoId){
   }catch(e){}
 }
 
-function spawnDiamonds(n=12){ const fx=document.getElementById('fx'); if(!fx) return; for(let i=0;i<n;i++){ const s=document.createElement('div'); s.className='fall'; s.textContent=['💎'][i%3]; s.style.left=Math.random()*100+'%'; s.style.fontSize=(14+Math.random()*18)+'px'; s.style.animationDuration=(2.5+Math.random()*2)+'s'; fx.appendChild(s); setTimeout(()=>s.remove(),4500); } }
-function toast(m){ if(m.includes('💎')) spawnDiamonds(10);const t=document.getElementById('toast');t.textContent=m;t.style.display='block';setTimeout(()=>t.style.display='none',3000)}
+function spawnDiamonds(n=12){ const fx=document.getElementById('fx'); if(!fx) return; for(let i=0;i<n;i++){ const s=document.createElement('img'); s.src='diamond-small.png?v=20'; s.className='fall-img'; s.style.left=Math.random()*100+'%'; const sz=18+Math.random()*22; s.style.width=sz+'px'; s.style.height=sz+'px'; s.style.animationDuration=(2.5+Math.random()*2)+'s'; fx.appendChild(s); setTimeout(()=>s.remove(),4500); } }
+function toast(m){ if(!m.includes('خطأ')) spawnDiamonds(10);const t=document.getElementById('toast');t.textContent=m;t.style.display='block';setTimeout(()=>t.style.display='none',3000)}
 function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
 function v(id){return document.getElementById(id).value.trim()}
 function setErr(m){const e=document.getElementById('err'); if(e) e.textContent=m}
 function showLogin(msg=''){ nav.style.display='none'; app.innerHTML=`<div class="card"><input id="em" type="email" placeholder="إيميلك"><input id="pw" type="password" placeholder="كلمة السر"><input id="suName" placeholder="اسمك... مثلا عماد"><input id="suUser" placeholder="اليوزر... مثلا emmad"><button id="loginBtn" onclick="doLogin()">دخول</button><button class="ghost" onclick="doSignup()">إنشاء حساب جديد</button><button class="ghost" onclick="resend()">رسالة تأكيد</button><div class="err" id="err">${esc(msg)}</div></div>`; }
 async function doSignup(){ const btn=document.getElementById('loginBtn'); try{ const email=v('em'),pw=v('pw'); if(!email) return setErr('اكتب إيميلك أولاً'); if(pw.length<6) return setErr('كلمة السر لازم 6 أحرف وفوق'); if(btn) btn.textContent='جاري إنشاء الحساب...'; const {data,error}=await sb.auth.signUp({email,password:pw}); if(error) throw error; try{ const nm=(document.getElementById('suName')?.value||'').trim(); const un=(document.getElementById('suUser')?.value||'').trim().replace('@','').toLowerCase(); if(data.user && (nm||un)) await sb.from('profiles').upsert([{user_id:data.user.id, display_name:nm||null, username:un||null}], {onConflict:'user_id'}); }catch(e){} toast('تم ✅ افتح إيميلك وأكد الحساب'); showLogin('تم ✅ روح لإيميلك وأكد الحساب، بعدها اضغط دخول'); }catch(e){ setErr(friendly(e)); } if(btn) btn.textContent='دخول'; }
 function friendly(e){ const m=String(e&&e.message||e||''); if(m.includes('Email not confirmed')) return 'إيميلك بعد ما تأكد - افتح إيميلك واضغط رابط التأكيد، أو اضغط زر (رسالة تأكيد)'; if(m.includes('Invalid login')) return 'الإيميل أو كلمة السر غلط - تأكد منهن وحاول مرة ثانية'; if(m.includes('User already')) return 'هذا الإيميل مسجل أصلاً - اضغط دخول بدل إنشاء حساب'; if(m.includes('Failed to fetch')||m.includes('Network')) return 'النت ضعيف - شغل النت وحاول مرة ثانية'; if(m.includes('supabase')) return 'مشكلة اتصال بالسيرفر - حدث الصفحة وحاول'; return 'خطأ: '+m; }
-async function doLogin(){ const btn=document.getElementById('loginBtn'); try{ if(!window.supabase||!sb) return setErr('الصفحة ما حملت كاملة - حدث الصفحة وحاول'); const email=v('em'),pw=v('pw'); if(!email) return setErr('اكتب إيميلك'); if(!pw) return setErr('اكتب كلمة السر'); if(btn){ btn.disabled=true; btn.textContent='جاري الدخول... 💎'; } setErr('جاري الدخول...'); const {data,error}=await sb.auth.signInWithPassword({email,password:pw}); if(error) throw error; if(!data||!data.user) throw new Error('ما رجع حساب - حاول مرة ثانية'); setErr('تم الدخول ✅'); await afterLogin(); }catch(e){ setErr(friendly(e)); } if(btn){ btn.disabled=false; btn.textContent='دخول'; } }
+async function doLogin(){ const btn=document.getElementById('loginBtn'); try{ if(!window.supabase||!sb) return setErr('الصفحة ما حملت كاملة - حدث الصفحة وحاول'); const email=v('em'),pw=v('pw'); if(!email) return setErr('اكتب إيميلك'); if(!pw) return setErr('اكتب كلمة السر'); if(btn){ btn.disabled=true; btn.textContent='جاري الدخول...'; } setErr('جاري الدخول...'); const {data,error}=await sb.auth.signInWithPassword({email,password:pw}); if(error) throw error; if(!data||!data.user) throw new Error('ما رجع حساب - حاول مرة ثانية'); setErr('تم الدخول ✅'); await afterLogin(); }catch(e){ setErr(friendly(e)); } if(btn){ btn.disabled=false; btn.textContent='دخول'; } }
 async function resend(){ try{ const email=v('em'); if(!email) return setErr('اكتب إيميلك أولاً'); setErr('جاري إرسال رسالة التأكيد...'); const {error}=await sb.auth.resend({type:'signup',email}); if(error) throw error; setErr('تم 📩 افتح إيميلك واضغط رابط التأكيد'); toast('تم 📩'); }catch(e){ setErr(friendly(e)); } }
-async function afterLogin(){ try{ const {data:{user}}=await sb.auth.getUser(); USER=user; if(!user) return showLogin('ما لگينا حساب - سجل دخول مرة ثانية'); try{ const {data}=await sb.from('admins').select('user_id').eq('user_id',user.id).maybeSingle(); IS_ADMIN=!!data; }catch(e){ IS_ADMIN=false; } try{ await loadCounts(); }catch(e){ COUNTS={pub:0,mine:0,pend:0}; } try{ await loadProfiles(); await loadViews(); }catch(e){} render(); }catch(e){ setErr(friendly(e)); } }
+async function afterLogin(){ try{ const {data:{user}}=await sb.auth.getUser(); USER=user; if(!user) return showLogin('ما لگينا حساب - سجل دخول مرة ثانية'); try{ const {data}=await sb.from('admins').select('user_id').eq('user_id',user.id).maybeSingle(); IS_ADMIN=!!data; }catch(e){ IS_ADMIN=false; } try{ await loadCounts(); }catch(e){ COUNTS={pub:0,mine:0,pend:0}; } try{ await loadProfiles(); await loadViews(); await loadBlocks(); await loadSaved(); await loadNotifs(); }catch(e){} render(); }catch(e){ setErr(friendly(e)); } }
 async function loadCounts(){ try{ const {data:pub}=await sb.from('videos').select('id').eq('is_published',true); const {data:mine}=await sb.from('videos').select('id').eq('owner_id',USER.id); MY_VIDEO_IDS=(mine||[]).map(x=>x.id); const {data:pend}=await sb.from('videos').select('id').eq('is_published',false); COUNTS={pub:pub?.length||0,mine:mine?.length||0,pend:pend?.length||0}; }catch(e){ COUNTS={pub:0,mine:0,pend:0}; } }
-function go(t){TAB=t; render()}
-function render(){
-  nav.style.display='flex'; document.getElementById('n-admin').style.display=IS_ADMIN?'block':'none';
-  ['feed','upload','you','admin','settings','users'].forEach(k=>{const b=document.getElementById('n-'+k); if(b) b.classList.toggle('on',TAB===k)});
-  const myName=displayNameOf(USER.id, USER.email); const myUser=usernameOf(USER.id);
-  const letter=(myName[0]||'D').toUpperCase();
-  app.innerHTML=`<div class="card profile"><div class="avatar">${letter}</div><h2>${esc(myName)}</h2><small>${esc(myUser||'@'+USER.email.split('@')[0])} ${IS_ADMIN?'• 👑':''}</small>
-  <div class="stats"><div class="stat"><b>${COUNTS.pub}</b><span>منشور</span></div><div class="stat"><b>${COUNTS.mine}</b><span>فيديوهاتي</span></div><div class="stat"><b>${COUNTS.pend}</b><span>بانتظار</span></div></div>
-  <div class="stats"><div class="stat"><b id="myFollowers">-</b><span>💎 متابعيني</span></div><div class="stat"><b id="myFollowing">-</b><span>💎 أتابع</span></div><div class="stat"><b id="myDiamonds">-</b><span>💎 جواهري</span></div></div>
-  <div class="card" style="margin-top:12px;text-align:right"><div class="section">👁️ نسبة المشاهدة - فيديوهاتي</div><div class="row"><button class="chip ${VIEWS_RANGE==='day'?'on':''}" onclick="VIEWS_RANGE='day';render()">اليوم</button><button class="chip ${VIEWS_RANGE==='week'?'on':''}" onclick="VIEWS_RANGE='week';render()">أسبوع</button><button class="chip ${VIEWS_RANGE==='month'?'on':''}" onclick="VIEWS_RANGE='month';render()">شهر</button><button class="chip ${VIEWS_RANGE==='year'?'on':''}" onclick="VIEWS_RANGE='year';render()">سنة</button><button class="chip ${VIEWS_RANGE==='all'?'on':''}" onclick="VIEWS_RANGE='all';render()">الكل</button></div><div class="stats"><div class="stat"><b>${myViewsInRange('day').length}</b><span>اليوم</span></div><div class="stat"><b>${myViewsInRange('week').length}</b><span>أسبوع</span></div><div class="stat"><b>${myViewsInRange('month').length}</b><span>شهر</span></div><div class="stat"><b>${myViewsInRange('year').length}</b><span>سنة</span></div><div class="stat"><b>${myViewsInRange('all').length}</b><span>الكل</span></div></div><p class="small">المعروض الآن: ${VIEWS_RANGE==='day'?'اليوم':VIEWS_RANGE==='week'?'الأسبوع':VIEWS_RANGE==='month'?'الشهر':VIEWS_RANGE==='year'?'السنة':'الكل'} = <b style="color:#FFD700">${myViewsInRange(VIEWS_RANGE).length}</b> مشاهدة</p></div>
-  <div class="row" style="margin-top:12px"><button class="ghost" onclick="logout()">خروج</button><button class="ghost" onclick="refresh()">🔄 تحديث</button></div></div><div id="content"></div>`;
-  loadTab();
-}
-async function refresh(){await loadCounts(); render()}
-async function logout(){await sb.auth.signOut(); USER=null; showLogin()}
-async function loadTab(){
-  const c=document.getElementById('content'); if(!c) return; c.innerHTML='<p class="small"></p>';
-  if(TAB==='users'){ c.innerHTML=`<div class="card"><div class="section">🔍 بحث على يوزر</div><input id="userSearch" placeholder="اكتب اسم اليوزر... مثلا emmad" value="${esc(USER_SEARCH)}" oninput="USER_SEARCH=this.value;renderUsers()"><div id="usersList"></div></div>`; renderUsers(); return; }
-  if(TAB==='settings'){ c.innerHTML=`<div class="card"><div class="section">⚙️ إعدادات الأمان</div>
-  <div class="security-card"><b>🔒 حسابك</b><br><small>الإيميل مخفي للآخرين • يظهر لك فقط: ${esc(maskEmail(USER.email))}</small><br><span class="pill">✅ تأكيد الإيميل</span> <span class="pill">✅ جلسة آمنة</span> <span class="pill">💎 حماية</span> <span class="pill">🔒 إيميل مخفي</span></div>
-  <div class="security-card"><b>🔑 تغيير كلمة السر</b><br><input id="newPw" type="password" placeholder="كلمة سر جديدة - 6 أحرف وفوق"><button onclick="changePw()">تغيير كلمة السر</button></div>
-  <div class="security-card"><b>👤 اسمك واليوزر</b><br><small>هذا الاسم واليوزر يظهران للكل بدل الإيميل - الإيميل يبقى مخفي</small><br><input id="displayName" placeholder="اكتب اسمك... مثلا عماد" value="${esc((PROFILES[USER.id]||{}).display_name||localStorage.getItem('wd_name')||'')}"><input id="usernameInput" placeholder="اليوزر... مثلا emmad - بدون @" value="${esc((PROFILES[USER.id]||{}).username||'')}"><button class="ghost" onclick="saveName()">حفظ الاسم واليوزر 💎</button><small id="nameMsg" class="small"></small></div>
-  <div class="security-card"><b>🛡 مستوى الأمان</b><br><div class="progress"><i style="width:85%"></i></div><small>85% - قوي جداً - فعل تغيير كلمة السر كل فترة</small></div>
-  <div class="security-card"><b>📩 رسالة تأكيد</b><br><button class="ghost" onclick="resend2()">إعادة إرسال رسالة التأكيد</button></div>
-  <div class="security-card"><b>🚪 تسجيل الخروج من كل الأجهزة</b><br><button class="ghost" onclick="logout()">خروج</button></div>
-  <div class="security-card"><b>🗑 حذف حسابي نهائياً</b><br><small>هذا يحذف حسابك من الجهاز فقط، تواصل مع الأدمن للحذف الكامل.</small><br><button class="del" onclick="if(confirm('متأكد تحذف حسابك؟')){logout()}">حذف الحساب</button></div></div>`; return; }
-  if(TAB==='upload'){ c.innerHTML=`<div class="card"><div class="section">➕ ارفع فيديو</div><input id="title" placeholder="العنوان"><textarea id="desc" placeholder="الوصف" rows="2"></textarea><label style="font-size:12px;color:#D4AF37">فيديو</label><input id="file" type="file" accept="video/*"><label style="font-size:12px;color:#D4AF37">صورة غلاف</label><input id="cover" type="file" accept="image/*"><button id="upBtn" onclick="doUpload()">🚀 ارفع</button><div class="progress"><i id="upProg"></i></div><small id="upStat" class="small"></small><div class="err" id="upErr"></div></div>`; return; }
-  if(TAB==='feed'){ c.innerHTML=`<div class="topbar"><button class="chip ${SORT==='new'?'on':''}" onclick="SORT='new';loadTab()">🆕 الأحدث</button><button class="chip ${SORT==='top'?'on':''}" onclick="SORT='top';loadTab()">💎 الأكثر جوهرة</button><button class="chip ${SORT==='leader'?'on':''}" onclick="SORT='leader';loadTab()">💎 المتصدرين</button></div><div id="feedList"><div class="skeleton"></div></div>`; }
-  let q;
-  if(TAB==='you') q=sb.from('videos').select('*').eq('owner_id',USER.id).order('created_at',{ascending:false});
-  else if(TAB==='admin') q=sb.from('videos').select('*').order('created_at',{ascending:false});
-  else q=sb.from('videos').select('*').eq('is_published',true).order('created_at',{ascending:false});
-  const {data,error}=await q;
-  if(error) return c.innerHTML='<p class="err">'+esc(error.message)+'</p>';
-  let list=data||[];
-  if(TAB==='feed' && SORT==='top'){ await loadLikes(list); list=[...list].sort((a,b)=>(likeInfo(b.id).count||0)-(likeInfo(a.id).count||0)); }
-  if(TAB==='feed' && SORT==='leader'){ await loadLikes(list); const leaders=[...list].sort((a,b)=>(likeInfo(b.id).count||0)-(likeInfo(a.id).count||0)).slice(0,3); const fl=document.getElementById('feedList'); if(fl) fl.innerHTML=`<div class="card leader"><div class="section">💎 متصدري الجواهر</div>`+leaders.map((v,i)=>`<div class="comment"><b>${'💎'} ${esc(displayNameOf(v.owner_id, v.owner_email))}</b> - ${esc(v.title)} - 💎 ${likeInfo(v.id).count}</div>`).join('')+`</div>`; }
-
-  if(TAB==='feed' && SEARCH){ list=list.filter(x=>(x.title||'').includes(SEARCH)||(x.description||'').includes(SEARCH)||(x.owner_email||'').includes(SEARCH)||displayNameOf(x.owner_id,x.owner_email).includes(SEARCH)); }
-  await loadLikes(list); await loadFollows(list);
-  const title=TAB==='feed'?'':TAB==='you'?'':'👑';
-  if(TAB==='you'&&list.length) c.innerHTML=`<div class="section">${title} (${list.length})</div><div class="grid">${list.map(t=>tile(t)).join('')}</div>`;
-  else if(TAB==='feed'){ const fl=document.getElementById('feedList'); if(fl) fl.innerHTML=`<input id="search" placeholder="🔍 بحث" value="${esc(SEARCH)}" oninput="SEARCH=this.value;loadTab()">`+(list.length?list.map(card).join(''):`<p class="small">لا يوجد فيديو بعد</p>`); }
-  else c.innerHTML=`<div class="section">${title} (${list.length})</div>`+(list.length?list.map(card).join(''):`<p class="small">${TAB==='you'?'لا يوجد فيديو':''}</p>`);
-}
-async function renderUsers(){ const box=document.getElementById('usersList'); if(!box) return; try{ const {data}=await sb.from('videos').select('owner_id,owner_email'); const map={}; (data||[]).forEach(v=>{ if(!v.owner_id) return; if(!map[v.owner_id]) map[v.owner_id]={email:v.owner_email||'',count:0}; map[v.owner_id].count++; }); let users=Object.entries(map).map(([id,u])=>({id,...u})); const q=(USER_SEARCH||'').trim().toLowerCase(); if(q) users=users.filter(u=>((u.email||'').toLowerCase().includes(q) || (displayNameOf(u.id,u.email).toLowerCase().includes(q)) || (usernameOf(u.id).toLowerCase().includes(q)))); await loadFollows([]); if(!users.length){ box.innerHTML='<p class="small">ما لگينا يوزر بهذا الاسم 💎</p>'; return; } box.innerHTML=users.map(u=>`<div class="comment" style="display:flex;justify-content:space-between;align-items:center;gap:8px"><div><b>💎 ${esc(displayNameOf(u.id, u.email))}</b><br><small>${esc(usernameOf(u.id))}</small><br><small>${u.count} فيديو • ${FOLLOWS[u.id]||0} متابع</small></div>${u.id===USER.id?'':`<button class="ghost follow-btn ${MY_FOLLOWING.has(u.id)?'on':''}" style="width:auto;padding:10px 14px" onclick="toggleFollow('${u.id}',this)">${MY_FOLLOWING.has(u.id)?'💎 تتابع':'💎 متابعة'}</button>`}</div>`).join(''); }catch(e){ box.innerHTML='<p class="err">'+esc(e.message)+'</p>'; } }
-async function loadFollows(list){ try{ const {data}=await sb.from('follows').select('follower_id,following_id'); const all=data||[]; MY_FOLLOWING=new Set(all.filter(r=>r.follower_id===USER.id).map(r=>r.following_id)); FOLLOWS={}; all.forEach(r=>{ FOLLOWS[r.following_id]=(FOLLOWS[r.following_id]||0)+1; }); const mf=document.getElementById('myFollowers'); if(mf) mf.textContent=all.filter(r=>r.following_id===USER.id).length; const mg=document.getElementById('myFollowing'); if(mg) mg.textContent=MY_FOLLOWING.size; const md=document.getElementById('myDiamonds'); if(md){ const {data:lk}=list.length?await sb.from('likes').select('video_id').in('video_id',list.map(x=>x.id)):{data:[]}; md.textContent=(lk||[]).length; } }catch(e){} }
-async function toggleFollow(ownerId,btn){ if(!ownerId||ownerId===USER.id) return; try{ if(MY_FOLLOWING.has(ownerId)){ const {error}=await sb.from('follows').delete().eq('follower_id',USER.id).eq('following_id',ownerId); if(error) throw error; MY_FOLLOWING.delete(ownerId); toast('تم إلغاء المتابعة'); } else { const {error}=await sb.from('follows').insert([{follower_id:USER.id,following_id:ownerId}]); if(error) throw error; MY_FOLLOWING.add(ownerId); toast('💎 تابعت 💎'); if(btn) btn.classList.add('burst'); } await loadFollows([]); render(); }catch(e){ toast('خطأ: '+e.message+' - نفذ ملف 03 بالـ SQL'); } }
-function maskEmail(e){ if(!e) return ''; const [a,b]=e.split('@'); return a.slice(0,2)+'***@'+(b||''); }
-async function saveName(){
-  const n=document.getElementById('displayName').value.trim();
-  const u=(document.getElementById('usernameInput')?.value||'').trim().replace('@','').replace(/\s+/g,'').toLowerCase();
-  if(!n && !u) return toast('اكتب اسمك أو اليوزر');
-  if(u && !/^[a-z0-9_\.]{3,30}$/.test(u)) return toast('اليوزر: حروف انكليزية وأرقام فقط، 3 أحرف وفوق، بدون مسافات');
-  try{
-    const {error} = await sb.from('profiles').upsert([{user_id:USER.id, display_name:n||null, username:u||null}], {onConflict:'user_id'});
-    if(error) throw error;
-    if(n) localStorage.setItem('wd_name',n);
-    PROFILES[USER.id]={user_id:USER.id, display_name:n||null, username:u||null};
-    const m=document.getElementById('nameMsg'); if(m) m.textContent='تم ✅ اسمك هسه: '+(n||'')+' '+(u?('@'+u):'');
-    toast('💎 تم حفظ اسمك واليوزر');
-    render();
-  }catch(e){ toast('خطأ: '+(e.message.includes('duplicate')||e.message.includes('unique') ? 'هذا اليوزر مأخوذ - اختار يوزر ثاني' : e.message+' - نفذ ملف 04 بالـ SQL')); }
-}
-async function changePw(){ const pw=document.getElementById('newPw').value.trim(); if(pw.length<6) return toast('كلمة السر 6 أحرف وفوق'); const {error}=await sb.auth.updateUser({password:pw}); if(error) return toast('خطأ: '+error.message); toast('✅ تم تغيير كلمة السر'); }
-async function resend2(){ const {error}=await sb.auth.resend({type:'signup',email:USER.email}); if(error) return toast(error.message); toast('تم 📩'); }
-async function loadLikes(list){ LIKES={}; try{ const ids=list.map(x=>x.id); if(!ids.length) return; const {data}=await sb.from('likes').select('video_id,user_id').in('video_id',ids); (data||[]).forEach(r=>{ LIKES[r.video_id]=LIKES[r.video_id]||{count:0,mine:false}; LIKES[r.video_id].count++; if(r.user_id===USER.id) LIKES[r.video_id].mine=true; }); }catch(e){} }
-function rankFor(n){ if(n>=50) return ['💎','rank-diamond']; if(n>=20) return ['💎 ذهبي','rank-gold']; if(n>=5) return ['💎 فضية','']; return ['💎 جديدة','']; }
-async function doubleDiamond(id,el){ const d=document.createElement('div'); d.className='big-diamond'; d.textContent='💎'; el.appendChild(d); setTimeout(()=>d.remove(),800); const info=likeInfo(id); if(!info.mine) await toggleLike(id,null); spawnDiamonds(14); }
-function reactComment(btn){ const em=btn.textContent; const box=btn.closest('.comment'); if(!box) return; let s=box.querySelector('.reacts'); if(!s){ s=document.createElement('div'); s.className='reacts small'; box.appendChild(s); } s.textContent=(s.textContent||'')+' '+em; spawnDiamonds(3); }
-function likeInfo(id){ return LIKES[id]||{count:0,mine:false}; }
-async function toggleLike(id,btn){ try{ const info=likeInfo(id); if(info.mine){ const {error}=await sb.from('likes').delete().eq('video_id',id).eq('user_id',USER.id); if(error) throw error; } else { const {error}=await sb.from('likes').insert([{video_id:id,user_id:USER.id}]); if(error) throw error; if(btn){ btn.classList.add('burst'); setTimeout(()=>btn.classList.remove('burst'),800); } toast('💎 جوهرة ذهبية!'); } await loadCounts(); render(); }catch(e){ toast('خطأ: '+e.message+' - نفذ ملف 03 بالـ SQL'); } }
-async function loadComments(id){ try{ const {data}=await sb.from('comments').select('*').eq('video_id',id).order('created_at',{ascending:true}); COMMENTS[id]=data||[]; const box=document.getElementById('cm-'+id); if(box) box.innerHTML=COMMENTS[id].length?COMMENTS[id].map(c=>`<div class="comment"><b>💎 ${esc(displayNameOf(c.user_id, c.user_email))}</b><br>${esc(c.text)}<div class="emoji-row"><button onclick="reactComment(this)">💎</button></div></div>`).join(''):'<p class="small">لا يوجد تعليقات بعد - كن أول واحد 💎</p>'; }catch(e){} }
-async function sendComment(id){ const inp=document.getElementById('ci-'+id); const text=inp.value.trim(); if(!text) return toast('اكتب تعليق أولاً'); const btn=document.getElementById('cb-'+id); if(btn) btn.disabled=true; try{ const {error}=await sb.from('comments').insert([{video_id:id,user_id:USER.id,user_email:USER.email,text}]); if(error) throw error; inp.value=''; toast('💎 تم إرسال تعليقك'); await loadComments(id); }catch(e){ toast('خطأ: '+e.message+' - نفذ ملف 03 بالـ SQL'); } if(btn) btn.disabled=false; }
-function shareVideo(url){ if(navigator.share){ navigator.share({url}).catch(()=>{}); } else { navigator.clipboard.writeText(url); toast('تم النسخ'); } }
-function tile(v){ return `<div class="tile"><video src="${esc(v.video_url)}" preload="metadata" poster="${esc(v.image_url||'')}"></video><div class="p"><b>${esc(v.title)}</b><br><small>${esc(displayNameOf(v.owner_id, v.owner_email))} • 👁️ ${VIEWS_COUNT[v.id]||0} • ${v.is_published?'✅ منشور':'⏳ بانتظار'}</small></div></div>`; }
-function card(v){ const isMine=v.owner_id===USER.id; const lk=likeInfo(v.id); return `<div class="video" ondblclick="doubleDiamond(${v.id},this)"><video src="${esc(v.video_url)}" controls preload="metadata" poster="${esc(v.image_url||'')}" onplay="trackView(${v.id})"></video><div class="pad"><b>${esc(v.title)}</b><br><small>${esc(displayNameOf(v.owner_id, v.owner_email))} ${esc(usernameOf(v.owner_id))} • ${new Date(v.created_at).toLocaleDateString('ar')} • <span id="vc-${v.id}">👁️ ${VIEWS_COUNT[v.id]||0}</span></small><br><span class="badge">${v.is_published?'✅ منشور':'⏳'}</span> <span class="badge ${rankFor(lk.count)[1]}">${rankFor(lk.count)[0]}</span><p style="font-size:13px;color:#ccc">${esc(v.description||'')}</p>
-<div class="row"><button class="ghost follow-btn ${MY_FOLLOWING.has(v.owner_id)?'on':''}" onclick="toggleFollow('${v.owner_id}',this)" ${v.owner_id===USER.id?'style="display:none"':''}>${MY_FOLLOWING.has(v.owner_id)?'💎 تتابع':'💎 متابعة'} (${FOLLOWS[v.owner_id]||0})</button></div>
-<div class="row"><button class="ghost like diamond-btn ${lk.mine?'on':''}" onclick="toggleLike(${v.id},this)">💎 ${lk.count}</button><button class="ghost" onclick="loadComments(${v.id})">💬 تعليقات</button><button class="ghost" onclick="shareVideo('${esc(v.video_url)}')">↗ مشاركة</button></div>
-<div id="cm-${v.id}"></div><div class="row" style="margin-top:8px"><input id="ci-${v.id}" placeholder="✨ اكتب تعليق جميل..."><button id="cb-${v.id}" onclick="sendComment(${v.id})">💎 إرسال</button></div>
-<div class="row" style="margin-top:8px">${IS_ADMIN&&!v.is_published?`<button class="approve" onclick="approve(${v.id})">✅ موافقة</button>`:''}${IS_ADMIN&&v.is_published?`<button class="ghost" onclick="unpublish(${v.id})">إخفاء</button>`:''}${(IS_ADMIN||isMine)?`<button class="del" onclick="delVideo(${v.id})">🗑 حذف</button>`:''}</div></div></div>`; }
-async function approve(id){const {error}=await sb.from('videos').update({is_published:true}).eq('id',id); if(error) return toast(error.message); toast('تم ✅'); await loadCounts(); render()}
-async function unpublish(id){const {error}=await sb.from('videos').update({is_published:false}).eq('id',id); if(error) return toast(error.message); toast('تم ✅'); await loadCounts(); render()}
-async function delVideo(id){if(!confirm('حذف؟'))return; const {error}=await sb.from('videos').delete().eq('id',id); if(error) return toast(error.message); toast('تم ✅'); await loadCounts(); render()}
-async function doUpload(){ const btn=document.getElementById('upBtn'), err=document.getElementById('upErr'); const title=document.getElementById('title').value.trim(), desc=document.getElementById('desc').value.trim(); const file=document.getElementById('file').files[0], cover=document.getElementById('cover').files[0]; if(!title||!file){err.textContent='';return} btn.disabled=true; btn.textContent='جاري الرفع... 💎'; const pr=document.getElementById('upProg'); if(pr) pr.style.width='30%'; const st=document.getElementById('upStat'); if(st) st.textContent='جاري رفع الفيديو... لا تسكر الصفحة'; try{ const fname=USER.id+'/'+Date.now()+'-'+file.name.replace(/[^a-zA-Z0-9._-]/g,'_'); const {error:upErr}=await sb.storage.from('videos').upload(fname,file,{upsert:true}); if(upErr) throw upErr; const {data:pub}=sb.storage.from('videos').getPublicUrl(fname); let image_url=''; if(cover){ const cf=USER.id+'/'+Date.now()+'-cover-'+cover.name.replace(/[^a-zA-Z0-9._-]/g,'_'); const {error:cerr}=await sb.storage.from('covers').upload(cf,cover,{upsert:true}); if(!cerr) image_url=sb.storage.from('covers').getPublicUrl(cf).data.publicUrl; } const {error:insErr}=await sb.from('videos').insert([{title,description:desc,video_url:pub.publicUrl,image_url,owner_id:USER.id,owner_email:USER.email,is_published:IS_ADMIN}]); if(insErr) throw insErr; toast('تم ✅'); TAB='you'; await loadCounts(); render(); }catch(e){ const m=String(e.message||''); err.textContent = m.includes('row-level')||m.includes('violates') ? 'الصلاحية مسدودة بالسوبربيس - نفذ ملف 03-fix-rls بالـ SQL بعدها ارفع مرة ثانية' : m; btn.disabled=false; btn.textContent='🚀 ارفع'; } }
-if(window.supabase) sb.auth.getSession().then(({data})=>{ if(data.session) afterLogin(); });
-if('serviceWorker' in navigator){ navigator.serviceWorker.register('sw.js?v=13').catch(()=>{}); }
-</script>
-</body>
-</html>
