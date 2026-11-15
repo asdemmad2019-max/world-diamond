@@ -1,4 +1,4 @@
-const CACHE='world-diamond-v13';
+const CACHE='world-diamond-v20';
 self.addEventListener('install',e=>{self.skipWaiting()});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(ks=>Promise.all(ks.map(k=>k!==CACHE?caches.delete(k):null))).then(()=>self.clients.claim()))});
 self.addEventListener('fetch',e=>{
